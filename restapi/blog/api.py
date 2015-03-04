@@ -16,7 +16,7 @@ class PostResource(ModelResource):
     always_return_data = True
 
 class CommentResource(ModelResource):
-  author = fields.CharField(attribute="author")
+  author = fields.CharField(attribute="author", null=False)
   text = fields.CharField(attribute="text")
   post = fields.ToOneField('blog.api.PostResource', 'post')
   class Meta:
