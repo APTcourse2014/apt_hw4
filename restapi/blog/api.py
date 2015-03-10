@@ -8,7 +8,7 @@ class PostResource(ModelResource):
   title = fields.CharField(attribute="title")
   text = fields.CharField(attribute="text")
   is_public = fields.BooleanField(attribute="is_public", use_in="detail")
-  comments_list = fields.ToManyField('blog.api.CommentResource', "comment_set", related_name="post", null=True, use_in="detail")
+  comments_list = fields.ToManyField('blog.api.CommentResource', "comment_set", related_name="post", null=True, use_in="detail", full=True)
   class Meta:
     queryset = Post.objects.all()
     resource_name = 'post'
