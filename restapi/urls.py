@@ -7,7 +7,8 @@ v1_api = Api(api_name='v1')
 v1_api.register(PostResource())
 v1_api.register(CommentResource())
 
-urlpatterns = patterns('',
+urlpatterns = patterns(
+    '',
     # Examples:
     # url(r'^$', 'restapi.views.home', name='home'),
     # url(r'^blog/', include('blog.urls')),
